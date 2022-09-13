@@ -45,6 +45,8 @@ Thumbs.db
 
 # DRF
 *.pyc
+**/__pycache__
+__pycache__/
 
 tbenv/
 db.sqlite3
