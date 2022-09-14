@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    
+    # auth token
+    'rest_framework.authtoken',
+    'dj_rest_auth',
 
     'place.apps.PlaceConfig',
 ]
