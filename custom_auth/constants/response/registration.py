@@ -15,3 +15,5 @@ def EMPTY_FIELD(field):
         'status': status.HTTP_400_BAD_REQUEST,
         'message': f'Can not create user with emtpy {field}',
     }
+
+# testing commit
