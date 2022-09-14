@@ -1,4 +1,3 @@
-from os import stat
 from rest_framework import status
 
 SUCCESS = {
