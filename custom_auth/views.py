@@ -22,15 +22,15 @@ class RegistrationViewSet(viewsets.ViewSet):
         )
 
         if password_1 != password_2:
-            return Response(registration.PASSWORD_DID_NOT_MATCH)
+            return Response(**registration.PASSWORD_DID_NOT_MATCH)
 
         if not username:
-            return Response(registration.EMPTY_FIELD('username'))
+            return Response(**registration.EMPTY_FIELD('username'))
 
         if not password_1:
-            return Response(registration.EMPTY_FIELD('password'))
+            return Response(**registration.EMPTY_FIELD('password'))
 
         user = User.objects.create_user(username=username, email=email, password=password_1, first_name=firstname, last_name=lastname)
         user.save()
 
-        return Response(registration.SUCCESS)
+        return Response(**registration.SUCCESS)
