@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from touristblog.utility.helper import ApiHelper
 # Create your models here.
 
-class Place(models.Model):
+class Place(models.Model, ApiHelper):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     country = models.CharField(max_length=30, null=True)
